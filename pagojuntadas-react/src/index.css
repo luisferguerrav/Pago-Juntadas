@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  text-align: center;
+  background-color: #f8fafc;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #555;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto 20px auto;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+input {
+  width: 120px;
+  padding: 6px;
+  margin: 4px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+li {
+  margin-top: 5px;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #4CAF50;
+  border-radius: 4px;
+}
+
+/* Contenedores de resultados */
+/* Contenedores de resultados */
+.resumen-general {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 3px solid #2196F3;
+}
+
+.ronda-container {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 3px solid #4CAF50;
+}
+
+.balance-final {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 3px solid #FF9800;
+}
+
+.resumen-general {
+  border-left: 4px solid #2196F3;
+}
+
+.ronda-container {
+  border-left: 4px solid #4CAF50;
+}
+
+.balance-final {
+  border-left: 4px solid #FF9800;
+}
+
+.cursor-eliminar{
+  cursor: 'pointer',
+  
+}
+.fila-seleccionada{
+  background-color: #e3f2fd;
+}
+
