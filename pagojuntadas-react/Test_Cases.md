@@ -53,10 +53,11 @@
     -**Resultado esperado:** El sistema no agrega ningun nuevo dato a la tabla y avisa que hay que rellenar los campos correspondientes 
 
     -**Prioridad:** ALTA 
-    -**Estado de CP:** CORRECTO 
+    -**Estado de CP:** CORRECTO **(ARREGLADO)**
 
     //NOTA: al darle click al boton "Agregar" es cierto que no agregar contenido a la tabla pero no da ningun aviso de que hay que rellenar el campo. 
 
+    //NOTA2: Ahora muestra un aviso de que por favor ingrese un nombre
 
 ### TC-003: Agregar persona sin rellenar el campo de Gasto
 
@@ -74,9 +75,12 @@
     -**Resultado esperado:** El sistema no agrega ningun nuevo dato a la tabla y avisa que hay que rellenar los campos correspondientes
 
     -**Prioridad:**  ALTA
-    -**Estado de CP:** FALLO 
+    -**Estado de CP:** CORRECTO **(ARREGLADO)**
 
     //NOTA: al no poner ningun dato en el campo de gasto el sistema automaticamente agrega a la persona pero le pone 0 en el campo de gasto 
+
+
+    //NOTA2: Ahora muestra un aviso de que se ingrese un monto minimo 
 
 
 ### TC-004: Agregar persona sin llenar ninguno de los dos campos 
@@ -96,10 +100,11 @@
     -**Resultado esperado:** El sitema no agrega nada a la tabla y da el aviso de que primero hay que rellenar los campos correspondientes
 
     -**Prioridad:** ALTA  
-    -**Estado de CP:** CORRECTO 
+    -**Estado de CP:** CORRECTO **(ARREGLADO)**
 
     //NOTA: Si el sistema no agrega ningun nuevo contenido a la tabla pero en ningun momento avisa que hay que rellenar los campos primero 
 
+    //NOTA2: Ahora muestra avisos de validacion para ambos campos 
 
 ### TC-005: Agregar persona con monto negativo 
 
@@ -439,21 +444,141 @@
 
     -**Prioridad:** BAJA
     -**Estado de CP:** CORRECTO 
-    
-### TC-20: 
 
-    -**Tipo:**   
-    -**Objetivo:** 
+
+### --Version: 2.0.0   
+
+
+### TC-20: Ir a seccion dividir gastos entre personas 
+
+    -**Tipo:**   Positivo 
+    -**Objetivo:** Evaluar que el sistema redirija a la seccion de dividir gastos 
 
     -**Precondiciones:**
+        -La aplicacion esta cargada 
+        -Se muestra la opcion de dividir gastos
        
 
     -**Pasos:**
+        1.Iniciar la app
+        2.Hacer click en boton de division de gastos
+        3.Verificar que se muestre el formulario  
        
-    -**Resultado esperado:**  
+    -**Resultado esperado:**  El sistema redirige de manera correcta a la sección Dividir gastos entre personas, mostrando el formulario disponible para ingresar datos.
+
+    -**Prioridad:** ALTA
+    -**Estado de CP:** CORRECTO
+
+
+### TC-21: Ir a seccion de dividir una cuenta 
+
+    -**Tipo:**   Positivo 
+    -**Objetivo:** Evaluar que el sistema redirija a dividir cuenta
+
+    -**Precondiciones:**
+        -La aplicacion esta cargada 
+        -Se muestra la opcion de dividir cuenta
+
+    -**Pasos:**
+        1.Iniciar la app
+        2.Hacer click en boton de division de cuenta
+        3.Verificar que se muestre el aviso de proximante
+       
+    -**Resultado esperado:**  El sistema redirige de manera correcta a la sección Dividir cuenta, mostrando el aviso de que estara proximamente disponible
+
+
+    -**Prioridad:** ALTA
+    -**Estado de CP:** CORRECTO 
+
+### TC-22: Volver a pestaña principal desde dividir gastos entre personas 
+
+    -**Tipo:**   Positivo 
+    -**Objetivo:** Validar que la aplicación permita regresar correctamente a la pestaña principal desde la sección de división de gastos.
+
+    -**Precondiciones:**
+        -La aplicacion esta cargada 
+        -Se visualiza la opcion de dividir gastos
+        -Se muestra la opcion de volver atras en la seccion de division de gastos
+
+    -**Pasos:**
+        1.Iniciar la app
+        2.Hacer click en boton de division de gastos
+        3.Verificar que se muestre el formulario
+        4.Confirmar que se muestre el boton Volver
+        5.Seleccionar el boton Volver y comprobar   que las opciones de la pestaña principal se visualicen correctamente
+       
+    -**Resultado esperado:**  El sistema permite navegar de manera correcta, regresando a la pestaña principal 
 
     -**Prioridad:** MEDIA
     -**Estado de CP:** CORRECTO 
+
+### TC-23: Volver a pestaña principal desde dividir cuenta 
+
+    -**Tipo:**   Positivo 
+    -**Objetivo:** Validar que la aplicación permita regresar correctamente a la pestaña principal desde la sección de dividir cuenta.
+
+    -**Precondiciones:**
+        -La aplicacion esta cargada 
+        -Se visualiza la opcion de dividir cuenta
+        -Se muestra la opcion de volver atras en la seccion de division de cuenta
+       
+
+    -**Pasos:**
+        1.Iniciar la app
+        2.Hacer click en boton de dividir cuenta
+        3.Verificar que se muestre el aviso de proximamente
+        4.Confirmar que se muestre el boton Volver
+        5.Seleccionar el boton Volver y comprobar   que las opciones de la pestaña principal se visualicen correctamente
+
+    -**Resultado esperado:**  El sistema permite navegar de manera correcta, regresando a la pestaña principal 
+
+    -**Prioridad:** MEDIA
+    -**Estado de CP:** CORRECTO 
+
+### TC-24: Volver a pestaña principal despues de clacular una division 
+
+    -**Tipo:**   Positivo 
+    -**Objetivo:** Evaluar que el sistema permita volver correctamente a la pestaña principal despues de haber calculado una division 
+
+    -**Precondiciones:**
+        -La aplicacion esta cargada 
+        -Se visualiza la opcion de dividir gastos entre personas
+        -Calcular una division
+        -Se muestra la opcion de volver atras en la seccion de division de gastos
+
+    -**Pasos:**
+        1.Iniciar la app
+        2.Hacer click en boton de dividir gastos
+        3.Agreggar personas con los campos correspondientes
+        4.Realizar la division de gastos
+        5.Seleccionar el boton Volver y comprobar   que las opciones de la pestaña principal se visualicen correctamente
+       
+    -**Resultado esperado:**  La aplicacion navega de forma correcta y realiza la divison y luego vuelve al menu principal 
+
+    -**Prioridad:** BAJA
+    -**Estado de CP:** CORRECTO 
+
+### TC-25: Volver atras luego de elimiar un usuario en dividir gastos 
+
+    -**Tipo:**   Positivo 
+    -**Objetivo:** Evaluar que el sistema permita volver atras luego de haber eliminado una persona 
+
+    -**Precondiciones:**
+        -La aplicación está cargada
+        -La tabla tiene datos previos
+
+    -**Pasos:**
+        1.Iniciar la app
+        2.Hacer click en boton de dividir gastos
+        3.Agreggar personas con los campos correspondientes
+        4.Eliminar una persona de la tabla
+        5.Seleccionar el boton Volver y comprobar   que las opciones de la pestaña principal se visualicen correctamente
+       
+    -**Resultado esperado:**  La aplicacion navega de forma correcta, elimina a la persona seleccionada y luego vuelve al menu principal
+
+    -**Prioridad:** BAJA
+    -**Estado de CP:** CORRECTO 
+    
 ### TC-21: 
 
     -**Tipo:**   

@@ -134,3 +134,11 @@ li {
   background-color: #e3f2fd;
 }
 
+.alerta1{
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+  border: 1px solid #ffeaa7;
+}
