@@ -2,7 +2,7 @@
 
 ## Informacion del Proyecto 
     -**Proyecto:** Calculadora de gastos compartidos 
-    -**Version:** 1.0.0
+    -**Version:** 2.0.0
     -**Responsable:** Luis Fernando Guerra
     -**Tecnologias:** React + JavaScript
 
@@ -578,7 +578,7 @@
 
     -**Prioridad:** BAJA
     -**Estado de CP:** CORRECTO 
-    
+
 ### TC-21: 
 
     -**Tipo:**   
