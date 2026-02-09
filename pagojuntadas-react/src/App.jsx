@@ -18,6 +18,10 @@ const App = () => {
     setResultado(resultadoCalculo);
   };
 
+  const limpiarResultado = () =>{
+    setResultado(null)
+  };
+
 
   return (
     <div>
@@ -54,6 +58,7 @@ const App = () => {
         <GastosApp
           resultado={resultado}
           onCalcular={calcular}
+          onLimpiarResultado={limpiarResultado}
         />
       )}
 

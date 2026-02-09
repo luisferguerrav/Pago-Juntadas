@@ -1,11 +1,26 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
-const Formulario = ({onAgregar}) =>{
+const Formulario = ({
+    onAgregar,
+    modoEdicion = false, 
+    datosIniciales = null,
+    onCancelar = null,
+    textoBoton = "Agregar"
+}) =>{
+
+
     const [nombre,setNombre] = useState("");
     const [gasto,setGasto] = useState("");
     const [mensaje, setMensaje] = useState("");
+
+    useEffect (() =>{
+        if (modoEdicion && datosIniciales){
+            setNombre(datosIniciales.nombre);
+            setGasto(datosIniciales.gasto.toString());
+        }
+    }, [modoEdicion, datosIniciales]);
 
 
     const mostrarAviso = (texto) =>{
@@ -20,7 +35,7 @@ const Formulario = ({onAgregar}) =>{
 
         //VALIDACION DE NOMBRE 
         
-        if (!nombre) {
+        if (!nombre.trim()) {
             mostrarAviso ("Por favor ingresa un nombre");
             return;
         }
@@ -43,11 +58,26 @@ const Formulario = ({onAgregar}) =>{
             gasto: Number(gasto)
         });
 
+        //solo limpia si no esta en modo edicion
+
+        if (!modoEdicion){
+            setNombre("");
+            setGasto("");
+        }
+
+        
+    };
+    
+    //NUEVA: funcion para manejar cancelar 
+    const handleCancelar = () => {
         setNombre("");
         setGasto("");
+        setMensaje("");
+        if (onCancelar){
+            onCancelar();
+        }
     };
-
-
+    
     return (
         <form onSubmit={handleSubmit}>
             {/*mesnsaje de aviso*/}
@@ -71,7 +101,14 @@ const Formulario = ({onAgregar}) =>{
                 step = "0.01"
             />
 
-            <button type="submit">Agregar</button>
+            <button type="submit">{textoBoton}</button>
+
+            {/*boton cancelar solo en modo edicion*/}
+            {modoEdicion && onCancelar && (
+                <button type="button" onClick={handleCancelar}>
+                    cancelar
+                </button>
+            )}
 
         </form>
 

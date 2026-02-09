@@ -1,14 +1,14 @@
 import GestorPersonas from "./GestorPersonas";
 
 
-const GastosApp = ({resultado, onCalcular}) => {
+const GastosApp = ({resultado, onCalcular, onLimpiarResultado}) => {
 
 
 
     return (
     <div>
       <h1> Pago Juntadas</h1> 
-        <GestorPersonas onCalcular={onCalcular}/>
+        <GestorPersonas onCalcular={onCalcular} onLimpiarResultado ={onLimpiarResultado}/>
 
 
       {resultado && (

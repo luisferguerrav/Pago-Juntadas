@@ -1,4 +1,4 @@
-const Tabla = ({personas, onSeleccionar, personaSeleccionada}) =>{
+const Tabla = ({personas, onSeleccionar, personaSeleccionada, onEditar}) =>{
 
 
     return(
@@ -7,6 +7,7 @@ const Tabla = ({personas, onSeleccionar, personaSeleccionada}) =>{
                 <tr>
                     <th>Nombre</th>
                     <th>Gasto</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
 
@@ -18,6 +19,17 @@ const Tabla = ({personas, onSeleccionar, personaSeleccionada}) =>{
                 >
                     <td>{p.nombre}</td>
                     <td>{p.gasto}</td>
+                    <td>
+                        <button
+                        className="btn-editar"
+                        onClick={(e) =>{
+                            e.stopPropagation();
+                            onEditar(index);
+                        }}
+                        >
+                            ✏️
+                        </button>
+                    </td>
                 </tr>
                 )}
             </tbody>

@@ -2,7 +2,7 @@
 
 ## Informacion del Proyecto 
     -**Proyecto:** Calculadora de gastos compartidos 
-    -**Version:** 2.0.0
+    -**Version:** 2.1.0
     -**Responsable:** Luis Fernando Guerra
     -**Tecnologias:** React + JavaScript
 
@@ -305,7 +305,7 @@
     -**Resultado esperado:**  El sistema no realiza la division correctamente al tener un monto negativo 
 
     -**Prioridad:** MEDIA
-    -**Estado de CP:** FALLO
+    -**Estado de CP:** CORRECTO (**ARREGLADO**)
 
     //NOTA: el sistema realiza la division con montos negativos 
 
@@ -328,7 +328,7 @@
     -**Resultado esperado:**  El sistema no debe realizar ninguna divison ya que nadie gasto nada
 
     -**Prioridad:** MEDIA
-    -**Estado de CP:** FALLO  
+    -**Estado de CP:** CORRECTO (**ARREGLADO**) 
 
 
 ### TC-15: Hacer la division con todos los montos negativos 
@@ -351,7 +351,7 @@
     -**Resultado esperado:**  El sistema no debe permitir calcular la divison con montos negativos 
 
     -**Prioridad:** MEDIA
-    -**Estado de CP:** FALLO 
+    -**Estado de CP:** CORRECTO (**ARREGLADO**) 
 
     //NOTA: el sistema realiza la division con los montos negativos pero no desgloza los pagos 
 
@@ -373,7 +373,7 @@
     -**Resultado esperado:** El sistema no agrega a la persona y muestra mensaje de validacion  
 
     -**Prioridad:** MEDIA
-    -**Estado de CP:** FALLO 
+    -**Estado de CP:** CORRECTO (**ARREGLADO**) 
 
     //NOTA: el sistema si agregar la persona si se rellena con espacios el campo 
 
@@ -422,7 +422,7 @@
     -**Resultado esperado:**  los resultados del calculo anterior se limpian automaticamente 
 
     -**Prioridad:** ALTA
-    -**Estado de CP:** FALLO 
+    -**Estado de CP:** CORRECTO (**ARREGLADO**) 
 
 
 ### TC-19: Agregar persona con caracteres especiales en el nombre 
@@ -578,6 +578,9 @@
 
     -**Prioridad:** BAJA
     -**Estado de CP:** CORRECTO 
+
+
+## VERSION 2.1.0
 
 ### TC-21: 
 
