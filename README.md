@@ -46,8 +46,8 @@ Cuando sales con amigos y cada uno paga diferentes cosas, esta app calcula autom
 
 ## 🧪 Testing
 
-- **25 casos de prueba** documentados en [TEST_CASES.md](./TEST_CASES.md)
-- **Cobertura:** 80% PASS (20/25)
+- **37 casos de prueba** documentados en [TEST_CASES.md](./TEST_CASES.md)
+- **8 bugs** documentados en [Bugs.md](./BUGS.md)
 - **Versión actual:** 2.0.0
 
 ---
@@ -55,7 +55,7 @@ Cuando sales con amigos y cada uno paga diferentes cosas, esta app calcula autom
 ## 🗺️ Próximos pasos
 
 - [ ] Modo "Dividir una cuenta simple"
-- [ ] Arreglar 5 bugs menores
+- [ ] Arreglar 2 bugs uno critico y uno menor
 - [ ] Testing automatizado
 
 ---
