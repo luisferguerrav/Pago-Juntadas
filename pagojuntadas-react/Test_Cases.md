@@ -582,6 +582,253 @@
 
 ## VERSION 2.1.0
 
+### TC-26: Editar nombre persona correctamente
+
+    -**Tipo:**   Positivo
+    -**Objetivo:** El sistema permite la edicion del nombre una persona sin problema 
+
+    -**Precondiciones:**
+        -La aplicación está cargada
+        -La tabla tiene datos previos
+       
+    -**Pasos:**
+        1.Iniciar la app 
+        2.Agregar una persona de con un nombre incorrecto 
+        3.Editar el nombre poniendo uno correcto 
+       
+    -**Resultado esperado:** El sistema edita el nombre y pone el nuevo sin problema alguno   
+
+    -**Prioridad:** MEDIA
+    -**Estado de CP:** CORRECTO 
+
+
+### TC-27: Editar el monto de una persona correctamente
+
+    -**Tipo:**   Positivo
+    -**Objetivo:**  El sistema permite la edicion del monto una persona sin problema 
+
+    -**Precondiciones:**
+        -La aplicación está cargada
+        -La tabla tiene datos previos
+
+    -**Pasos:**
+        1.Iniciar la app 
+        2.Agregar una persona de con un monto incorrecto 
+        3.Editar el monto poniendo uno correcto 
+       
+    -**Resultado esperado:**  El sistema edita el monto y pone el nuevo sin problema alguno  
+
+    -**Prioridad:** MEDIA
+    -**Estado de CP:** CORRECTO 
+
+### TC-28: Dejar nombre vacio al editar
+
+    -**Tipo:**   Negativo
+    -**Objetivo:** Validar que el sistema no permita dejar el nombre vacio al editarlo 
+
+    -**Precondiciones:**
+        -La aplicación está cargada
+        -La tabla tiene datos previos
+
+    -**Pasos:**
+        1.Iniciar la app 
+        2.Agregar una persona correctamente
+        3.Editar el nombre poniendo uno vacio 
+       
+    -**Resultado esperado:**  El sistema no permite colocar un nombre vacio dando un aviso y no poniendolo en la tabla
+
+    -**Prioridad:** ALTA
+    -**Estado de CP:**  CORRECTO
+
+### TC-29: colocar monto negativo al editar 
+
+    -**Tipo:**   Negativo
+    -**Objetivo:** Validar que el sistema no permita dejar agregar un monto negativo al editarlo 
+
+    -**Precondiciones:**
+        -La aplicación está cargada
+        -La tabla tiene datos previos
+
+    -**Pasos:**
+        1.Iniciar la app 
+        2.Agregar una persona correctamente
+        3.Editar el moto poniendo uno negativo 
+        
+    -**Resultado esperado:**  El sistema no permite colocar montos negativos al editar dando un aviso y no agregandolo a la tabla
+
+    -**Prioridad:** ALTA
+    -**Estado de CP:** CORRECTO 
+
+### TC-30: Cancelar edicion y volver a agregar personas
+
+    -**Tipo:**  Positivo  
+    -**Objetivo:** Evaluar que el sistema cancele la edicion de la pesona sin realizar ningun cambio 
+
+    -**Precondiciones:**
+        -La aplicación está cargada
+        -La tabla tiene datos previos
+
+    -**Pasos:**
+        1.Iniciar la app 
+        2.Agregar una persona correctamente
+        3.Hacer click en el boton editar y no realizar nada 
+        4.Cancelar edicion y verificar que todo siga igual 
+       
+    -**Resultado esperado:** El sistema al no realizar ninguna accion al editar y cancelar la edicion mantiene la tabla igual  
+
+    -**Prioridad:** MEDIA
+    -**Estado de CP:** CORRECTO 
+### TC-31: Cancelar edicion al modificar el nombre y monto 
+
+    -**Tipo:**  Negativo  
+    -**Objetivo:** Evaluar que el sistema no realice los cambios al cancelar la edicion 
+
+    -**Precondiciones:**
+        -La aplicación está cargada
+        -La tabla tiene datos previos
+        -Editar el nombre o el gasto 
+       
+    -**Pasos:**
+        1.Iniciar la app 
+        2.Agregar una persona correctamente
+        3.Hacer click en el boton editar y editar
+        4.Cancelar edicion y verificar que todo siga igual 
+       
+    -**Resultado esperado:**  El sistema no modifica la tabla al cancelar la edicion dejandola como estaba en un principio 
+
+    -**Prioridad:** MEDIA
+    -**Estado de CP:** CORRECTO 
+
+### TC-32: Realizar division de personas luego de editar a una 
+
+    -**Tipo:**   Positivo
+    -**Objetivo:** Evaluar que haga la division de gastos con los datos correctos luego de editar una persona
+
+    -**Precondiciones:**
+        -La aplicación está cargada
+        -La tabla tiene datos previos
+        -Editar el nombre o el gasto 
+
+    -**Pasos:**
+        1.Iniciar la app 
+        2.Agregar personas correctamente
+        3.Hacer click en el boton editar y editar
+        4.Realizar division 
+
+    -**Resultado esperado:**  El sistema realiza la division luego de editar a una persona y motrando el monto/nombre nuevo 
+
+    -**Prioridad:** ALTA
+    -**Estado de CP:** CORRECTO 
+
+### TC-33:  Editar persona despues de hacer la division 
+
+    -**Tipo:**  Positivo 
+    -**Objetivo:** Validar que la tabla se refresque y se actualice luego de editar al haber hecho una divison antes
+
+    -**Precondiciones:**
+        -La aplicación está cargada
+        -La tabla tiene datos previos
+        -Divison realizada
+
+    -**Pasos:**
+        1.Iniciar la app 
+        2.Agregar personas correctamente
+        3.Realizar division 
+        4.Hacer click en el boton editar y editar
+       
+    -**Resultado esperado:**  La tabla se refresca y se edita para mostrar los datos actualizados 
+
+    -**Prioridad:** MEDIA
+    -**Estado de CP:** CORRECTO 
+
+### TC-34: Eliminar una persona despues de realizar una division
+
+    -**Tipo:**  Positivo  
+    -**Objetivo:** Validar que la tabla se refresque y se actualice luego de eliminar al haber hecho una divison antes
+
+    -**Precondiciones:**
+        -La aplicación está cargada
+        -La tabla tiene datos previos
+        -Divison realizada
+
+    -**Pasos:**
+        1.Iniciar la app 
+        2.Agregar personas correctamente
+        3.Realizar division 
+        4.Seleccionar persona y elimiar 
+       
+    -**Resultado esperado:**  La tabla se refresca y se edita para mostrar los datos actualizados 
+
+    -**Prioridad:** MEDIA
+    -**Estado de CP:** FALLO 
+
+    //NOTA: AL eliminar a una persona los resultados anteriores quedan y se ven como si no se hubiera eliminado a nadie 
+
+### TC-35: Editar persona mientras esta seleccionada para eliminar  
+    -**Tipo:**   Negativo
+    -**Objetivo:** Validar el comportamiento cuando se edita una persona que está actualmente seleccionada
+
+    -**Precondiciones:**
+        -La aplicación está cargada
+        -La tabla tiene al menos dos personas cargadas
+        -Una persona esta selecionada
+
+    -**Pasos:**
+        1. Iniciar la app
+        2. Agregar 2-3 personas
+        3. Seleccionar una persona (click en la fila)
+        4. Hacer click en el botón de editar de la MISMA persona seleccionada
+        5. Modificar nombre o monto
+        6. Guardar cambios
+        7. Verificar estado de selección
+       
+    -**Resultado esperado:**  El sistema edita correctamente y mantiene o limpia la selección de forma consistente sin errores
+
+    -**Prioridad:** MEDIA
+    -**Estado de CP:** CORRECTO 
+
+    //NOTA: al terminar la edicion lo hace sin problemas y la persona sigue seleccionada
+
+### TC-36: Agregar multiples personas con el mismo nombre 
+    -**Tipo:**   Positivo
+    -**Objetivo:** Evaluar si el sistema permite agregar personas con nombres duplicados
+
+    -**Precondiciones:**
+        -La aplicación está cargada
+        -La tabla está vacía o con datos previos
+       
+    -**Pasos:**
+        1. Iniciar la app
+        2. Agregar persona con nombre "Luis" y monto $100
+        3. Agregar otra persona con nombre "Luis" y monto $50
+        4. Hacer click en "Calcular"
+        5. Verificar que ambas personas aparezcan en resultados
+       
+    -**Resultado esperado:**  El sistema permite nombres duplicados y realiza el cálculo correctamente diferenciando por posición en la tabla
+
+    -**Prioridad:** MEDIA
+    -**Estado de CP:**  CORRECTO 
+
+### TC-37: Division de juntada real
+
+    -**Tipo:**  Positivo  
+    -**Objetivo:** Validar que el sistema haga la division correctamente con datos reales 
+
+    -**Precondiciones:**
+        -la aplicacion esta cargadaa
+        -Datos Reales
+       
+    -**Pasos:**
+        1.Iniciar la app
+        2.Agregar personas con su nombre y monto correspondiente
+        3.Hacer division 
+       
+    -**Resultado esperado:**  El sistema hace la division correctamente y da los pagos por ronda, el saldo por ronda, y su balance fimnal 
+
+    -**Prioridad:** ALTA
+    -**Estado de CP:** FALLO  
+
+    //BUG-08
 ### TC-21: 
 
     -**Tipo:**   
@@ -596,5 +843,32 @@
 
     -**Prioridad:** MEDIA
     -**Estado de CP:** CORRECTO 
+### TC-21: 
 
+    -**Tipo:**   
+    -**Objetivo:** 
+
+    -**Precondiciones:**
+       
+
+    -**Pasos:**
+       
+    -**Resultado esperado:**  
+
+    -**Prioridad:** MEDIA
+    -**Estado de CP:** CORRECTO 
+### TC-21: 
+
+    -**Tipo:**   
+    -**Objetivo:** 
+
+    -**Precondiciones:**
+       
+
+    -**Pasos:**
+       
+    -**Resultado esperado:**  
+
+    -**Prioridad:** MEDIA
+    -**Estado de CP:** CORRECTO 
 -----------    
