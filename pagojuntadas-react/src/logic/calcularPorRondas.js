@@ -26,7 +26,7 @@ const calcularPorRondas = (personas) =>{
     const rondas = [];
 
     personasConSaldo.forEach(pagador =>{
-        //solo procesar si esta persona gasto
+        //SKIP solo para no agregar a rondas pero si procesar pagos
 
         if (pagador.gasto <= 0) return;
 
@@ -43,35 +43,34 @@ const calcularPorRondas = (personas) =>{
 
 
         personasConSaldo.forEach(persona => {
-            pagosPorRonda.push ({
-                quien: persona.nombre,
-                paga: montoPorPersona,
-                a: pagador.nombre
-            });
+            
+                pagosPorRonda.push ({
+                    quien: persona.nombre,
+                    paga: montoPorPersona,
+                    a: pagador.nombre
+                });
+            
+            persona.saldo -= montoPorPersona;
 
             //actualizar saldos
-
-            if (persona.nombre === pagador.nombre){
-                //el pagador recibe de todos incluyendose a si mismo
-
-                persona.saldo += (montoPorPersona * n) - pagador.gasto;
-            } else {
-                //los demas pagan
-                persona.saldo -= montoPorPersona;
-            }
         });
-
-        rondas.push ({
-            pagador: pagador.nombre,
-            gastoTotal: pagador.gasto,
-            montoPorPersona: montoPorPersona,
-            pagos: pagosPorRonda,
-            saldosAntes: saldosAntesRonda,
-            saldosDespues: personasConSaldo.map(p => ({
-                nombre: p.nombre,
-                saldo: p.saldo
-            }))
-        });
+        pagador.saldo += pagador.gasto;
+    
+        const saldosDespuesRonda = personasConSaldo.map (p => ({
+            nombre: p.nombre,
+            saldo: p.saldo
+        }));
+        
+            rondas.push ({
+                pagador: pagador.nombre,
+                gastoTotal: pagador.gasto,
+                montoPorPersona: montoPorPersona,
+                pagos: pagosPorRonda,
+                saldosAntes: saldosAntesRonda,
+                saldosDespues: saldosDespuesRonda
+                
+            });
+    
     });
 
     return {
@@ -80,7 +79,7 @@ const calcularPorRondas = (personas) =>{
         rondas: rondas,
         balanceFinal: personasConSaldo.map(p =>({
             nombre: p.nombre,
-            saldo: p.gasto
+            saldo: p.saldo
         }))
     };
 
